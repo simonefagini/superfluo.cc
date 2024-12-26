@@ -1,3 +1,9 @@
+:root {
+  --body-bg: #d988ae;
+}
+
 body {
-      background-color: #ff76b2;
-  }
+  background: var(--body-bg);
+}
+
+
