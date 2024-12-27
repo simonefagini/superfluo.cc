@@ -1,6 +1,6 @@
 :root {
   --text-color: black;
-  --body-bg: #FFFFFF;
+  --body-bg: black;
 }
 
 body {
@@ -19,6 +19,17 @@ a {
 #logo {
   width: 90vw;
   height: auto;
+ color:var(--text-color);
+}
+
+#logo:hover {
+  animation: spin 0s linear forwards;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(3deg) scale(1.1);
+  }
 }
 
 #container {
