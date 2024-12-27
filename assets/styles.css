@@ -1,5 +1,6 @@
 :root {
   --text-color: black;
+  --body-bg: #FFFB76;
 }
 
 body {
@@ -8,6 +9,7 @@ body {
   overflow: hidden;
   display: grid;
   place-items: center;
+  background-color: var(--body-bg);
 }
 
 a {
