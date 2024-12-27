@@ -50,3 +50,13 @@ a {
     opacity: 1;
   }
 }
+
+@media (hover: none) {
+  #logo:active {
+    animation: spin 0s linear forwards;
+  }
+  
+  #logo:hover {
+    animation: none;
+  }
+}
