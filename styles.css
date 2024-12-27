@@ -21,3 +21,8 @@ a {
   font-size: 10vw;
   letter-spacing: 0.3vw;
 }
+
+#container {
+  display: grid;
+  place-items: center;
+}
