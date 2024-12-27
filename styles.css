@@ -1,9 +1,23 @@
 :root {
-  --body-bg: #d988ae;
+  --text-color: black;
 }
 
 body {
+  height: 100vh;
   background: var(--body-bg);
+  margin: 0rem;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
 }
 
+a {
+  text-decoration: none;
+}
 
+#logo {
+  color: var(--text-color);
+  font-family: 'Arial Black';
+  font-size: 10vw;
+  letter-spacing: 0.3vw;
+}
