@@ -1,9 +1,8 @@
-// List of color codes
 const colors = [
-  "#b9dde5",
-  "#b9d599",
-  "#f7c59e",
-  "#d988ae"
+  "#FFFB76",
+  "#8DFF76",
+  "#76E9FF",
+  "#ff76b2"
   
 ];
 
@@ -15,5 +14,7 @@ function getRandomInt(max) {
 window.onload = function () {
   const randomIndex = getRandomInt(colors.length);
   const selectedColor = colors[randomIndex];
-  document.documentElement.style.setProperty("--body-bg", selectedColor);
+   document.documentElement.style.setProperty("--body-bg", selectedColor);
 };
+
+
