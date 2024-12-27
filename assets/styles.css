@@ -1,10 +1,9 @@
 :root {
   --text-color: black;
-  --body-bg: #FFFB76;
+  --body-bg: #FFFFFF;
 }
 
 body {
-  height: 100vh;
   margin: 0;
   overflow: hidden;
   display: grid;
@@ -18,7 +17,6 @@ a {
 }
 
 #logo {
-  color: var(--text-color);
   width: 90vw;
   height: auto;
 }
@@ -27,5 +25,17 @@ a {
   display: grid;
   place-items: center;
   height: 100vh;
-  width: 100vw; 
+  width: 100vw;
+  animation: scaleIn 0.5s cubic-bezier(0,.70,.40,.40) forwards;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
