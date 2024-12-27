@@ -4,8 +4,7 @@
 
 body {
   height: 100vh;
-  background: var(--body-bg);
-  margin: 0rem;
+  margin: 0;
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -13,18 +12,16 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 #logo {
   color: var(--text-color);
-  font-family: 'Arial Black';
-  font-size: 10vw;
-  letter-spacing: 0.3vw;
+  width: 80vw;
+  height: auto;
 }
 
 #container {
   display: grid;
   place-items: center;
-  height: 100vh;
-  width: 100vw; 
 }
