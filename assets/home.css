@@ -2,12 +2,11 @@
   --text-color: black;
   --body-bg: white;
   --image-bg: #f0f0f0;
-  --logo-bg: #eaeaea; /* Background for logo */
+  --logo-bg: #eaeaea;
 }
 
 body {
   margin: 0;
-  padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,54 +37,40 @@ a {
   gap: 1rem;
 }
 
-/* Logo style */
 #logo {
-  width: 5rem; /* Larger logo */
-  height: 5rem;
+  width: 15rem;
+  height: 2rem;
   display: inline-block;
-  background: var(--logo-bg); /* Logo background from variable */
-  mask: url('SUPERFLUO-LOGO.svg') no-repeat center;
-  -webkit-mask: url('SUPERFLUO-LOGO.svg') no-repeat center;
-  mask-size: contain;
-  -webkit-mask-size: contain;
+  background: var(--logo-bg);
+  -webkit-mask: url('SUPERFLUO-LOGO.svg') no-repeat center / contain;
+  mask: url('SUPERFLUO-LOGO.svg') no-repeat center / contain;
 }
 
-/* Image grid */
 #images {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
-/* Links with fallback for broken images */
 #images a {
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: var(--image-bg); /* Fallback background */
+  background-color: var(--image-bg);
+  line-height: 0;
 }
 
-/* Image styles */
 #images img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: var(--image-bg); /* Light grey background */
-  border-radius: 0;
 }
 
-/* Hide broken images while fallback is shown */
 #images img:not([src]) {
-  visibility: hidden; /* Hide image if the src is empty */
+  visibility: hidden;
 }
 
-body::before,
-body::after {
-  content: "";
-  flex-grow: 1;
-}
-
-/* Mobile: 1 image per row */
 @media (max-width: 50em) {
   #images {
     grid-template-columns: 1fr;
