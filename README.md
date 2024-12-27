@@ -1,5 +1,5 @@
 # SUPERFLUO
-[superfluo](https://superfluo.cc) is a personal experimental website and a study ground for learning and experimenting with various topics.
+[superfluo](https://superfluo.cc) is a creative playground where I break, build, and learn stuff.
 
 ## Content
 
