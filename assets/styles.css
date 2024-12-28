@@ -51,6 +51,11 @@ a {
   }
 }
 
+#container.loading {
+  pointer-events: none;
+  
+}
+
 @media (hover: none) {
   #logo:active {
     animation: spin 0s linear forwards;
