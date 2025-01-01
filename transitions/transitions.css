@@ -1,8 +1,8 @@
 :root {
   --text-color: black;
-  --body-bg: white; 
+  --body-bg: white; /* Default overwritten by colors.js */
   --image-bg: #f0f0f0;
-  --logo-bg: #eaeaea;
+  --logo-bg: var(--body-bg); /* Matches the dynamic background color */
 }
 
 body {
@@ -43,16 +43,18 @@ a {
 #logo {
   width: clamp(12rem, 20vw, 18rem);
   height: 2.5rem;
-  background: var(--logo-bg);
+  background: var(--logo-bg); /* Dynamic color */
   -webkit-mask: url('assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
   mask: url('assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 #description {
   margin: 0 0 3rem 0;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   line-height: 1.4;
-  width: 100%;/
+  width: 100%;
 }
 
 #image-stack {
@@ -64,7 +66,7 @@ a {
 
 #image-stack img {
   width: 100%;
-  max-width: 800px; 
+  max-width: 800px;
   height: auto;
   object-fit: cover;
   background-color: var(--image-bg);
