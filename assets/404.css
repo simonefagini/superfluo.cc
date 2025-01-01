@@ -1,0 +1,27 @@
+:root {
+  --text-color: black;
+  --body-bg: black;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background-color: var(--body-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: "Arial Black", "Roboto", sans-serif;
+  font-size: 20vw;
+  text-transform: uppercase;
+}
+
+#container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
