@@ -44,10 +44,9 @@ a {
   width: clamp(12rem, 20vw, 18rem);
   height: 2.5rem;
   background: var(--logo-bg);
-  -webkit-mask: url('assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
-  mask: url('assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  -webkit-mask: url('../assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
+  mask: url('../assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
+}
 }
 
 #description {
