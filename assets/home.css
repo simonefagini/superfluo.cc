@@ -43,7 +43,7 @@ a {
   width: clamp(12rem, 20vw, 18rem);
   height: 2.5rem;
   margin-bottom: 0.5rem;
-  background: var(--logo-bg);
+  background: var(--logo-bg, #eaeaea);
   -webkit-mask: url('SUPERFLUO-LOGO.svg') no-repeat center / contain;
   mask: url('SUPERFLUO-LOGO.svg') no-repeat center / contain;
 }
