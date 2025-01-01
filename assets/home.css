@@ -29,24 +29,19 @@ a {
   padding: 5vw 0;
 }
 
-#gallery p {
-  margin-bottom: 5vw;
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
-  line-height: 1.2;
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  max-width: 100%;
-}
-
 #logo {
   width: clamp(12rem, 20vw, 18rem);
   height: 2.5rem;
-  display: inline-block;
-  flex-shrink: 0;
+  margin-bottom: 0.5rem;
   background: var(--logo-bg);
   -webkit-mask: url('SUPERFLUO-LOGO.svg') no-repeat center / contain;
   mask: url('SUPERFLUO-LOGO.svg') no-repeat center / contain;
+}
+
+#gallery p {
+  margin: 0 0 5vw 0;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  line-height: 1.2;
 }
 
 #images {
@@ -80,15 +75,12 @@ a {
   }
   
   #gallery p {
-    flex-direction: column;
-    align-items: flex-start;
     font-size: clamp(1.25rem, 4vw, 2rem);
   }
 
   #logo {
     width: clamp(10rem, 40vw, 15rem);
     height: 2rem;
-    margin-bottom: 1rem;
   }
   
   #gallery {
