@@ -1,10 +1,11 @@
 :root {
   --text-color: black;
-  --body-bg: white;
+  --body-bg: white; /* Initial background, overwritten by colors.js */
   --image-bg: #f0f0f0;
-  --logo-bg: #eaeaea;
+  --logo-bg: var(--text-color); /* Updated to match text color */
 }
 
+/* General Body */
 body {
   margin: 0;
   min-height: 100vh;
@@ -16,59 +17,61 @@ body {
   font-weight: 400;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: var(--text-color);
 }
 
+/* Project Detail Container */
 #project-detail {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Left-aligned */
   width: 85vw;
-  max-width: 70rem;
+  max-width: 800px; /* Matches image max-width */
   padding: 5vw 0;
-  text-align: left;
 }
 
+/* Logo Link */
 #logo-link {
   display: block;
   margin-bottom: 1rem;
 }
 
+/* Logo Styling */
 #logo-link:hover #logo {
-  background: var(--body-bg);
+  background: var(--text-color);
   transition: background-color 0.3s ease;
 }
 
 #logo {
   width: clamp(12rem, 20vw, 18rem);
   height: 2.5rem;
-  background: var(--logo-bg);
-  -webkit-mask: url('/assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
-  mask: url('/assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
+  background: var(--logo-bg); /* Logo matches text color */
+  -webkit-mask: url('assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
+  mask: url('assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
 }
 
-/* Project Description Text */
+/* Description Styling */
 #description {
-  margin: 0 0 5vw 0;
+  margin: 0 0 3rem 0;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   line-height: 1.4;
-  max-width: 50rem; /* Avoid too wide text */
+  width: 100%; /* Matches image width */
 }
 
 /* Image Stack */
 #image-stack {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2rem;
-  width: 100%; /* Make images fit the width */
+  width: 100%; /* Matches text width */
 }
 
 #image-stack img {
   width: 100%;
-  max-width: 800px;
+  max-width: 800px; /* Matches text width */
   height: auto;
   object-fit: cover;
   background-color: var(--image-bg);
