@@ -2,13 +2,14 @@
   --text-color: black;
   --body-bg: white;
   --image-bg: #f0f0f0;
-  --logo-bg: black;
+  --logo-bg: #eaeaea;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--body-bg);
@@ -22,17 +23,15 @@ a {
 }
 
 #project-detail {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 85vw;
-  max-width: 800px;
+  width: 70vw;
+  max-width: 70rem;
+  text-align: left;
   padding: 5vw 0;
 }
 
 #logo-link {
   display: block;
-  margin-bottom: 1rem;
+  text-decoration: none;
 }
 
 #logo-link:hover #logo {
@@ -43,17 +42,16 @@ a {
 #logo {
   width: clamp(12rem, 20vw, 18rem);
   height: 2.5rem;
+  margin-bottom: 0.5rem;
   background: var(--logo-bg);
   -webkit-mask: url('../assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
   mask: url('../assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
 }
-}
 
 #description {
-  margin: 0 0 3rem 0;
+  margin: 0 0 5vw 0;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
-  line-height: 1.4;
-  width: 100%;
+  line-height: 1.2;
 }
 
 #image-stack {
@@ -65,7 +63,6 @@ a {
 
 #image-stack img {
   width: 100%;
-  max-width: 800px;
   height: auto;
   object-fit: cover;
   background-color: var(--image-bg);
@@ -79,5 +76,9 @@ a {
   #logo {
     width: clamp(10rem, 40vw, 15rem);
     height: 2rem;
+  }
+  
+  #project-detail {
+    width: 85vw;
   }
 }
