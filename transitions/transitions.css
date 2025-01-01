@@ -1,8 +1,8 @@
 :root {
   --text-color: black;
-  --body-bg: white; /* Default overwritten by colors.js */
+  --body-bg: white;
   --image-bg: #f0f0f0;
-  --logo-bg: var(--body-bg); /* Matches the dynamic background color */
+  --logo-bg: black;
 }
 
 body {
@@ -43,7 +43,7 @@ a {
 #logo {
   width: clamp(12rem, 20vw, 18rem);
   height: 2.5rem;
-  background: var(--logo-bg); /* Dynamic color */
+  background: var(--logo-bg);
   -webkit-mask: url('assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
   mask: url('assets/SUPERFLUO-LOGO.svg') no-repeat center / contain;
   -webkit-mask-repeat: no-repeat;
