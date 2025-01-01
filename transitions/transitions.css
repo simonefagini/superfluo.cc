@@ -27,6 +27,9 @@ a {
  max-width: 70rem;
  text-align: left;
  padding: 5vw 0;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
 }
 
 #logo-link {
@@ -52,15 +55,15 @@ a {
  margin: 0 0 5vw 0;
  font-size: clamp(1.5rem, 2vw, 2.5rem);
  line-height: 1.2;
+ max-width: 100%;
 }
 
 #image-stack {
  display: flex;
  flex-direction: column;
  gap: 2rem;
- width: 110vh;
- max-width: 100%;
- margin: 0 auto;
+ width: min(110vh, 100%);
+ align-self: flex-start;
 }
 
 #image-stack img {
@@ -82,9 +85,5 @@ a {
  
  #project-detail {
    width: 85vw;
- }
-
- #image-stack {
-   width: 100%;
  }
 }
