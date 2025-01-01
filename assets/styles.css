@@ -28,7 +28,7 @@ a {
 
 @keyframes spin {
   100% {
-    transform: rotate(3deg) scale(1.1);
+    transform: rotate(0deg) scale(1.05);
   }
 }
 
@@ -42,7 +42,7 @@ a {
 
 @keyframes scaleIn {
   0% {
-    transform: scale(5);
+    transform: scaleY(100);
     opacity: 0;
   }
   100% {
