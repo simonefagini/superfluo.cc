@@ -73,6 +73,14 @@ a {
  background-color: var(--image-bg);
 }
 
+#outLink {
+  color: var(--logo-bg);
+}
+
+#outLink:hover {
+  color: #d0d0d0;
+}
+
 @media (max-width: 50em) {
  #description {
    font-size: clamp(1.25rem, 4vw, 2rem);
