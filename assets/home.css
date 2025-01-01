@@ -31,17 +31,17 @@ a {
 
 #gallery p {
   margin-bottom: 5vw;
-  font-size: clamp(1.25rem, 1.5vw, 2rem);
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   line-height: 1.2;
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
   gap: 1rem;
-  flex-wrap: nowrap;
+  max-width: 100%;
 }
 
 #logo {
-  width: clamp(10rem, 15vw, 15rem);
-  height: 2rem;
+  width: clamp(12rem, 20vw, 18rem);
+  height: 2.5rem;
   display: inline-block;
   flex-shrink: 0;
   background: var(--logo-bg);
@@ -78,15 +78,17 @@ a {
   #images {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 14in) {
-  #gallery p {
-    font-size: 1.25rem;
-  }
   
+  #gallery p {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+  }
+
   #logo {
-    width: 10rem;
+    width: clamp(10rem, 40vw, 15rem);
+    height: 2rem;
+    margin-bottom: 1rem;
   }
   
   #gallery {
