@@ -3,8 +3,6 @@
   --body-bg: white;
   --image-bg: #f0f0f0;
   --logo-bg: #eaeaea;
-  --overall-dim: 47vw;
-  --transition-duration: 0.3s;
 }
 
 body {
@@ -19,15 +17,29 @@ body {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 #project-detail {
-  width: var(--overall-dim);
+  width: 70vw;
   max-width: 70rem;
   text-align: left;
   padding: 5vw 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: width var(--transition-duration) ease-in-out;
+}
+
+#logo-link {
+  display: block;
+  text-decoration: none;
+}
+
+#logo-link:hover #logo {
+  background: #d0d0d0;
+  transition: background-color 0.3s ease;
 }
 
 #logo {
@@ -37,8 +49,6 @@ body {
   background: var(--logo-bg);
   -webkit-mask: url("../assets/SUPERFLUO-LOGO.svg") no-repeat center / contain;
   mask: url("../assets/SUPERFLUO-LOGO.svg") no-repeat center / contain;
-  transition: width var(--transition-duration) ease-in-out,
-              height var(--transition-duration) ease-in-out;
 }
 
 #description {
@@ -46,7 +56,6 @@ body {
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   line-height: 1.2;
   max-width: 100%;
-  transition: font-size var(--transition-duration) ease-in-out;
 }
 
 #image-stack {
@@ -55,8 +64,6 @@ body {
   gap: 2rem;
   width: 100%;
   align-self: center;
-  transition: width var(--transition-duration) ease-in-out,
-              gap var(--transition-duration) ease-in-out;
 }
 
 .image-container {
@@ -67,33 +74,167 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: width var(--transition-duration) ease-in-out,
-              height var(--transition-duration) ease-in-out;
 }
 
 .image-container img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  transition: transform var(--transition-duration) ease-in-out,
-              width var(--transition-duration) ease-in-out;
+  transition: transform 0.5s ease;
 }
 
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: 1;
+}
+
+.image-container::after {
+  content: attr(data-title);
+  font-family: Roboto, sans-serif;
+  font-weight: 10;
+  font-style: italic;
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0.8rem;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.image-container:hover::before {
+  opacity: 1;
+}
+
+.image-container:hover::after {
+  opacity: 1;
+}
+
+.image-container:hover img {
+  transform: scale(1);
+}
+
+/* Where the magic happens*/
+.magic-container {
+  width: 100%;
+  background-color: var(--image-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.magic-container {
+  width: 100%;
+  background-color: var(--image-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.comparison-slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  touch-action: none;
+}
+
+.comparison-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none; /* no image dragging */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);
+}
+
+.underlay {
+  width: 100%;
+}
+
+.slider-line {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 2px;
+  height: 100%;
+  background: white;
+  transform: translateX(-50%);
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 40px;
+  height: 100%;
+  transform: translateX(-50%);
+  cursor: ew-resize;
+}
+
+.slider-line::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#outLink {
+  color: var(--logo-bg);
+}
+
+#outLink:hover {
+  color: #d0d0d0;
+}
+
+#caption {
+  color: var(--text-color);
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0 0 0 0;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  line-height: 1.2;
+  max-width: 98%;
+}
 
 @media (max-width: 50em) {
-  #project-detail {
-    width: 85vw;
+  #description {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
   }
-  
   #logo {
     width: clamp(10rem, 40vw, 15rem);
     height: 2rem;
   }
-}
-
-/* large screens */
-@media (min-width: 120em) {
   #project-detail {
-    width: 40vw;
+    width: 85vw;
   }
 }
