@@ -5,6 +5,10 @@
   --logo-bg: #eaeaea;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -66,6 +70,37 @@ a {
   aspect-ratio: 1 / 1;
   background-color: var(--image-bg);
   line-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#images a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.1), rgba(0,0,0,.2));
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: 1;
+}
+
+#images a::after {
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  color: white;
+  font-size: 1.2rem;
+  content: attr(data-title);
+  position: absolute;
+  top: 1.5rem;
+  left: 0.8rem;
+  right: 1.5rem;
+  z-index: 2;
+  opacity: 0;
+  transition: all .1s ease;
 }
 
 #images img {
@@ -73,10 +108,30 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#images a:hover::before {
+  opacity: 1;
+}
+
+#images a:hover::after {
+  opacity: 1;
+}
+
+#images a:hover img {
+  transform: scale(1.1);
 }
 
 #images img:not([src]) {
   visibility: hidden;
+  opacity: 0;
+}
+
+#images a#noActive {
+  cursor: default;
+  pointer-events: none;
+  touch-action: manipulation;
 }
 
 @media (max-width: 50em) {
