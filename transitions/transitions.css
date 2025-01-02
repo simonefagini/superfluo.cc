@@ -228,7 +228,7 @@ a {
 
 @media (max-width: 50em) {
   #description {
-    font-size: clamp(1.25rem, 4vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
   }
   #logo {
     width: clamp(10rem, 40vw, 15rem);
