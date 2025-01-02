@@ -3,6 +3,7 @@
   --body-bg: white;
   --image-bg: #f0f0f0;
   --logo-bg: #eaeaea;
+  --overall-dim: 47vw;
 }
 
 body {
@@ -23,7 +24,7 @@ a {
 }
 
 #project-detail {
-  width: 70vw;
+  width: var(--overall-dim);
   max-width: 70rem;
   text-align: left;
   padding: 5vw 0;
@@ -47,8 +48,10 @@ a {
   height: 2.5rem;
   margin-bottom: 0.5rem;
   background: var(--logo-bg);
-  -webkit-mask: url("../assets/SUPERFLUO-LOGO.svg") no-repeat center / contain;
-  mask: url("../assets/SUPERFLUO-LOGO.svg") no-repeat center / contain;
+  -webkit-mask: url("https://raw.githubusercontent.com/simonefagini/superfluo.cc/e9e6ab83c59ceb82d7d4d2930c9f1177f609ccb7/assets/SUPERFLUO-LOGO.svg")
+    no-repeat center / contain;
+  mask: url("https://raw.githubusercontent.com/simonefagini/superfluo.cc/e9e6ab83c59ceb82d7d4d2930c9f1177f609ccb7/assets/SUPERFLUO-LOGO.svg")
+    no-repeat center / contain;
 }
 
 #description {
@@ -183,7 +186,7 @@ a {
   background: white;
   transform: translateX(-50%);
   pointer-events: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .slider-handle {
@@ -197,7 +200,7 @@ a {
 }
 
 .slider-line::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 18px;
   height: 18px;
