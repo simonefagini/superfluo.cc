@@ -1,6 +1,6 @@
 /* Function to set --overall-dim based on aspect ratio */
 function setOverallDim() {
-  const isVertical = window.innerHeight > window.innerWidth;
+  const isVertical = window.innerHeight >= window.innerWidth;
   const root = document.documentElement;
 
   if (isVertical) {
