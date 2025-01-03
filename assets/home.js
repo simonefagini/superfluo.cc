@@ -1,8 +1,8 @@
 const colors = [
-  "#FFFB76",
-  "#8DFF76",
-  "#76E9FF",
-  "#ff76b2"
+  "#FFFB76",   //Yellow
+  "#8DFF76",   //Green
+  "#76E9FF",  //Blue
+  "#ff76b2"   //Pink
   
 ];
 
