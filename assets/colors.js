@@ -14,8 +14,4 @@ window.onload = function () {
   const randomIndex = getRandomInt(colors.length);
   const selectedColor = colors[randomIndex];
   document.documentElement.style.setProperty("--body-bg", selectedColor);
-  document.documentElement.style.setProperty("--link-color", selectedColor);
-  
-  // Force a repaint to ensure the variable updates
-  document.body.offsetHeight;
 };
