@@ -3,6 +3,7 @@
   --body-bg: white;
   --image-bg: #f0f0f0;
   --logo-bg: #eaeaea;
+  --grey-link: #888;
 }
 
 body {
@@ -15,7 +16,6 @@ body {
   background-color: var(--body-bg);
   font-family: Roboto, sans-serif;
   font-weight: 400;
-  color: var(--text-color);
 }
 
 a {
@@ -35,6 +35,7 @@ a {
 
 #logo-link {
   display: block;
+  text-decoration: none;
 }
 
 #logo-link:hover #logo {
@@ -54,7 +55,17 @@ a {
 #description {
   margin: 0 0 5vw 0;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
-  line-height: 1.4;
+  line-height: 1.2;
+  max-width: 100%;
+}
+
+#description a {
+  color: var(--logo-bg);
+  transition: color 0.2s ease;
+}
+
+#description a:hover {
+  color: var(--grey-link);
 }
 
 #image-stack {
@@ -120,20 +131,21 @@ a {
 
 #outLink {
   color: var(--logo-bg);
+  transition: color 0.2s ease;
 }
 
 #outLink:hover {
-  color: #d0d0d0;
+  color: var(--grey-link);
 }
 
-
+/* Captions */
 .caption {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
-  line-height: 1.4;
+  line-height: 1.2;
   margin: 0 0 1.5rem 0;
-  color: #000;
+  color: var(--text-color);
 }
 
 .caption a {
@@ -142,32 +154,34 @@ a {
 }
 
 .caption a:hover {
-  color: var(--text-color);
+  color: var(--grey-link);
 }
 
+/* Credits Section */
+#credits {
+  width: 100%;
+}
 
 #credits .caption {
-  font-size: clamp(1.2rem, 1.1vw, 1.6rem); 
-  color: #888;                             
+  font-size: clamp(1.2rem, 1.1vw, 1.6rem);
+  color: var(--grey-link);
   line-height: 1.4;
   margin: 0 0 1rem 0;
 }
 
 #credits a {
-  color: #888; 
-  transition: opacity 0.2s ease;
+  color: var(--grey-link);
+  transition: color 0.2s ease;
 }
 
 #credits a:hover {
   color: var(--text-color);
-  opacity: 0.8;
 }
 
-/* -------- RESPONSIVE -------- */
+/* Responsive */
 @media (max-width: 50em) {
-  #description,
-  .caption {
-    font-size: clamp(1.4rem, 2vw, 2rem);
+  #description {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
   }
 
   #logo {
