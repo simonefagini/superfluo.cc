@@ -126,7 +126,7 @@ a {
   color: #d0d0d0;
 }
 
-/* -------- CAPTION STYLE FOR DESCRIPTIONS -------- */
+
 .caption {
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -136,21 +136,30 @@ a {
   color: #000;
 }
 
-/* -------- CREDITS STYLE (grey & smaller) -------- */
+.caption a {
+  color: var(--logo-bg);
+  transition: color 0.2s ease;
+}
+
+.caption a:hover {
+  color: var(--text-color);
+}
+
+
 #credits .caption {
-  font-size: clamp(1.2rem, 1.1vw, 1.6rem); /* smaller than main captions */
-  color: #888;                             /* grey for subtlety */
+  font-size: clamp(1.2rem, 1.1vw, 1.6rem); 
+  color: #888;                             
   line-height: 1.4;
   margin: 0 0 1rem 0;
 }
 
 #credits a {
-  color: #888; /* link same grey as credits */
+  color: #888; 
   transition: opacity 0.2s ease;
 }
 
 #credits a:hover {
-  color: var(--text-color); /* turns black on hover */
+  color: var(--text-color);
   opacity: 0.8;
 }
 
