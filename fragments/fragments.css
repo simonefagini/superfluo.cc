@@ -5,7 +5,6 @@
   --logo-bg: #eaeaea;
   --grey-link: #888;
 }
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -17,12 +16,10 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
 }
-
 a {
   text-decoration: none;
   color: var(--text-color);
 }
-
 #project-detail {
   width: 70vw;
   max-width: 70rem;
@@ -32,17 +29,14 @@ a {
   flex-direction: column;
   align-items: flex-start;
 }
-
 #logo-link {
   display: block;
   text-decoration: none;
 }
-
 #logo-link:hover #logo {
   background: #d0d0d0;
   transition: background-color 0.3s ease;
 }
-
 #logo {
   width: clamp(12rem, 20vw, 18rem);
   height: 2.5rem;
@@ -51,23 +45,19 @@ a {
   -webkit-mask: url("../assets/SUPERFLUO-LOGO.svg") no-repeat center / contain;
   mask: url("../assets/SUPERFLUO-LOGO.svg") no-repeat center / contain;
 }
-
 #description {
   margin: 0 0 5vw 0;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   line-height: 1.2;
   max-width: 100%;
 }
-
 #description a {
-  color: var(--logo-bg);
+  color: var(--grey-link);
   transition: color 0.2s ease;
 }
-
 #description a:hover {
-  color: var(--grey-link);
+  color: var(--logo-bg);
 }
-
 #image-stack {
   display: flex;
   flex-direction: column;
@@ -75,7 +65,6 @@ a {
   width: 100%;
   align-self: center;
 }
-
 .image-container {
   position: relative;
   width: 100%;
@@ -85,14 +74,12 @@ a {
   align-items: center;
   overflow: hidden;
 }
-
 .image-container img {
   width: 100%;
   height: auto;
   object-fit: contain;
   transition: transform 0.5s ease;
 }
-
 .image-container::before {
   content: "";
   position: absolute;
@@ -101,7 +88,6 @@ a {
   transition: opacity 0.1s ease;
   z-index: 1;
 }
-
 .image-container::after {
   content: attr(data-title);
   font-family: Roboto, sans-serif;
@@ -116,28 +102,22 @@ a {
   opacity: 0;
   transition: opacity 0.1s ease;
 }
-
 .image-container:hover::before {
   opacity: 1;
 }
-
 .image-container:hover::after {
   opacity: 1;
 }
-
 .image-container:hover img {
   transform: scale(1);
 }
-
 #outLink {
   color: var(--logo-bg);
   transition: color 0.2s ease;
 }
-
 #outLink:hover {
   color: var(--grey-link);
 }
-
 /* Captions */
 .caption {
   font-family: Roboto, sans-serif;
@@ -147,53 +127,43 @@ a {
   margin: 0 0 1.5rem 0;
   color: var(--text-color);
 }
-
 .caption a {
-  color: var(--logo-bg);
+  color: var(--grey-link);
   transition: color 0.2s ease;
 }
-
 .caption a:hover {
-  color: var(--grey-link);
+  color: var(--logo-bg);
 }
-
 /* Credits Section */
 #credits {
   width: 100%;
 }
-
 #credits .caption {
   font-size: clamp(1.2rem, 1.1vw, 1.6rem);
   color: var(--grey-link);
   line-height: 1.4;
   margin: 0 0 1rem 0;
 }
-
 #credits a {
   color: var(--grey-link);
   transition: color 0.2s ease;
 }
-
 #credits a:hover {
-  color: var(--text-color);
+  color: var(--body-bg);
 }
-
 /* Responsive */
 @media (max-width: 50em) {
   #description {
     font-size: clamp(1.5rem, 2vw, 2.5rem);
   }
-
   #logo {
     width: clamp(10rem, 40vw, 15rem);
     height: 2rem;
   }
-
   #project-detail {
     width: 85vw;
   }
 }
-
 /* MacBook-style screens */
 @media (min-width: 1400px) and (max-width: 1600px) {
   #project-detail {
