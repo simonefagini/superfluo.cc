@@ -149,7 +149,7 @@ a {
   transition: color 0.2s ease;
 }
 #credits a:hover {
-  color: var(--body-bg);
+  color: var(--link-color);
 }
 /* Responsive */
 @media (max-width: 50em) {
