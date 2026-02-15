@@ -3,7 +3,6 @@ const colors = [
   "#8DFF76",   //Green
   "#76E9FF",  //Blue
   "#ff76b2"   //Pink
-  
 ];
 
 function getRandomInt(max) {
@@ -14,7 +13,8 @@ function getRandomInt(max) {
 window.onload = function () {
   const randomIndex = getRandomInt(colors.length);
   const selectedColor = colors[randomIndex];
-   document.documentElement.style.setProperty("--body-bg", selectedColor);
+  document.documentElement.style.setProperty("--body-bg", selectedColor);
+  
+  // Force a repaint to ensure the variable updates
+  document.body.offsetHeight;
 };
-
-
