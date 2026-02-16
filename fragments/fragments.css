@@ -111,6 +111,11 @@ a {
 .image-container:hover img {
   transform: scale(1);
 }
+
+#photographer::after {
+  color: #888;
+}
+
 #outLink {
   color: var(--logo-bg);
   transition: color 0.2s ease;
