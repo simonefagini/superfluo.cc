@@ -113,7 +113,8 @@ a {
 }
 
 #photographer::after {
-  color: #888;
+  color: #fff;
+  bottom: 0.3rem;
 }
 
 #outLink {
