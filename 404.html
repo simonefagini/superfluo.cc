@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SUPERFLUO - Not Found</title>
-    <link rel="stylesheet" href="../assets/404.css" />
-    <script src="../assets/colors.js"></script>
-    <script src="../assets/404.js" defer></script>
-  </head>
- <body>
-  <div id="chars">
-    <p id="test">
-      <a href="/home.html">
-        404
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#195c33">
+
+  <!--
+    Required while the site is hosted at:
+    https://simonefagini.github.io/argefc.com/
+  -->
+  <base href="/argefc.com/">
+
+  <title>404 — ARGE FC</title>
+
+  <!-- Immediate background while the external CSS loads -->
+  <style>
+    html,
+    body {
+      background-color: #195c33;
+    }
+  </style>
+
+  <link
+    rel="preload"
+    as="image"
+    href="https://raw.githubusercontent.com/simonefagini/argefc.com/refs/heads/main/_resources/LOG_TEMP.png"
+  >
+
+  <link rel="stylesheet" href="404.css">
+</head>
+
+<body>
+
+  <main class="error-page">
+
+    <div class="error-enter">
+
+      <a
+        class="error-link"
+        id="error-link"
+        href="home/home.html"
+        aria-label="Return to ARGE FC home page"
+      >
+
+        <span class="error-number error-number-left">
+          4
+        </span>
+
+        <span class="error-bee">
+          <img
+            src="https://raw.githubusercontent.com/simonefagini/argefc.com/refs/heads/main/_resources/LOG_TEMP.png"
+            alt=""
+            fetchpriority="high"
+          >
+        </span>
+
+        <span class="error-number error-number-right">
+          4
+        </span>
+
       </a>
-    </p>
-  </div>
+
+    </div>
+
+  </main>
+
+  <script src="404.js"></script>
 </body>
 </html>
