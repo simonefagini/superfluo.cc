@@ -12,16 +12,14 @@ function randomColor() {
 // One color per page load, shared by the page, the logo and the favicon
 const PICKED_COLOR = randomColor();
 
-// Swap the static fallback icon for a circle in the picked color
+// Point the page icon at the circle PNG for the picked color.
+// Add the new link before removing the old one so there is never no icon.
 (function () {
-  const svg =
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
-    '<circle cx="16" cy="16" r="15" fill="' + PICKED_COLOR + '"/></svg>';
+  const old = document.querySelector('link[rel="icon"]');
   const link = document.createElement("link");
   link.rel = "icon";
-  link.type = "image/svg+xml";
-  link.href = "data:image/svg+xml," + encodeURIComponent(svg);
-  const old = document.querySelector('link[rel="icon"]');
-  if (old) old.remove();
+  link.type = "image/png";
+  link.href = "/favicons/" + PICKED_COLOR.slice(1).toLowerCase() + ".png";
   document.head.appendChild(link);
+  if (old) old.remove();
 })();
