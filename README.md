@@ -12,11 +12,11 @@ Static HTML/CSS/JS, deployed with GitHub Pages. No build step.
    ├── home.html             main page with the project tiles
    ├── 404.html              not-found page
    ├── favicon.png           grey fallback icon
-   ├── project-template.html  starting point for a new project page
    ├── robots.txt            crawler rules and sitemap pointer
    ├── sitemap.xml           list of public pages
    ├── favicons/             one circle icon per palette color
    ├── assets/               shared CSS, JS and the logo
+   ├── template/             copy this folder to start a new project
    ├── fragments/            fragments project page and its images
    └── transitions/          transitions project page and its images
 ```
@@ -35,11 +35,11 @@ Add the hex value to `PALETTE` in `assets/palette.js`, and add a matching circle
 
 ## Adding a project
 
-1. Create a folder `NAME/` and put the images in it.
-2. Copy `project-template.html` to `NAME/NAME.html` and replace every placeholder (title, description, OG tags, images). Delete the `noindex` line.
-3. Copy `transitions/transitions.css` to `NAME/NAME.css` and point the template's stylesheet link at it.
-4. In each `<img>`: set the real `width`/`height`, write `alt` text describing the image, and use `loading="lazy"` on all but the first. `data-title` is the hover label.
-5. Add the tile to `home.html` in place of a placeholder (with `alt` text).
+1. Duplicate the `template/` folder and rename it to the project name, for example `newproject/`. It contains a page (`index.html`) and its stylesheet (`style.css`), and renders at `superfluo.cc/newproject/`.
+2. Put the images in the new folder.
+3. In `index.html`, replace every placeholder (search for the capitals): title, description, OG tags, text and images. Delete the `noindex` line.
+4. In each `<img>`: set the real `src`, `width` and `height`, write `alt` text describing the image, and use `loading="lazy"` on all but the first. `data-title` is the hover label.
+5. Add the tile to `home.html` in place of a placeholder (link to `newproject/`, with `alt` text).
 6. Add the page URL to `sitemap.xml`.
 
 ## License
