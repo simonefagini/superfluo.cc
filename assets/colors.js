@@ -1,4 +1,4 @@
 // Set random color on load
 window.onload = function () {
-  document.documentElement.style.setProperty("--body-bg", randomColor());
+  document.documentElement.style.setProperty("--body-bg", PICKED_COLOR);
 };
