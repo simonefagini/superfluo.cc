@@ -12,6 +12,7 @@ Static HTML/CSS/JS, deployed with GitHub Pages. No build step.
    ├── home.html             main page with the project tiles
    ├── 404.html              not-found page
    ├── favicon.png           grey fallback icon
+   ├── project-template.html  starting point for a new project page
    ├── robots.txt            crawler rules and sitemap pointer
    ├── sitemap.xml           list of public pages
    ├── favicons/             one circle icon per palette color
@@ -31,6 +32,15 @@ Static HTML/CSS/JS, deployed with GitHub Pages. No build step.
 ## Adding a color
 
 Add the hex value to `PALETTE` in `assets/palette.js`, and add a matching circle PNG named after it (lowercase hex, no `#`) to `favicons/`, for example `favicons/ff76b2.png`.
+
+## Adding a project
+
+1. Create a folder `NAME/` and put the images in it.
+2. Copy `project-template.html` to `NAME/NAME.html` and replace every placeholder (title, description, OG tags, images). Delete the `noindex` line.
+3. Copy `transitions/transitions.css` to `NAME/NAME.css` as a starting point.
+4. In each `<img>`: set the real `width`/`height`, write `alt` text describing the image, and use `loading="lazy"` on all but the first. `data-title` is the hover label.
+5. Add the tile to `home.html` in place of a placeholder (with `alt` text).
+6. Add the page URL to `sitemap.xml`.
 
 ## License
 

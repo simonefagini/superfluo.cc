@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+  Template for a new project page. See "Adding a project" in the README.
+  Copy to NAME/NAME.html, then replace every PLACEHOLDER (search for capitals).
+  Not a real page: noindex keeps it out of search results.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex"> <!-- REMOVE this line in the copy -->
+  <title>PROJECT_NAME - SUPERFLUO</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="PROJECT_DESCRIPTION">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SUPERFLUO">
+  <meta property="og:title" content="PROJECT_NAME - SUPERFLUO">
+  <meta property="og:description" content="PROJECT_DESCRIPTION">
+  <meta property="og:url" content="https://superfluo.cc/NAME/NAME.html">
+  <meta property="og:image" content="https://superfluo.cc/NAME/PREVIEW_IMAGE.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="NAME.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="../assets/ratio.js" defer></script>
+  <script src="../assets/palette.js" defer></script>
+  <script src="../assets/home.js" defer></script>
+</head>
+<body>
+  <div id="project-detail">
+    <a href="../home.html" id="logo-link" aria-label="SUPERFLUO, home">
+      <div id="logo"></div>
+    </a>
+    <p id="description">
+      <i>PROJECT_NAME</i><br>
+      ONE-LINE DESCRIPTION<br>
+      VENUE, CITY<br>
+      DD.MM.YY – DD.MM.YY
+    </p>
+    <div id="image-stack">
+      <!-- Repeat per image. Use the real pixel size for width/height.
+           Keep the first image eager; add loading="lazy" to the rest.
+           data-title is the hover label (credit or frame number);
+           alt describes what the image shows. -->
+      <div class="image-container" data-title="CREDIT © YEAR">
+        <img src="IMAGE.jpg" width="1920" height="1920" alt="WHAT THE IMAGE SHOWS">
+      </div>
+      <p id="caption">CAPTION</p>
+
+      <div class="image-container" data-title="CREDIT © YEAR">
+        <img src="IMAGE_2.jpg" width="1920" height="1920" loading="lazy" alt="WHAT THE IMAGE SHOWS">
+      </div>
+      <p id="caption">CAPTION</p>
+    </div>
+  </div>
+</body>
+</html>
