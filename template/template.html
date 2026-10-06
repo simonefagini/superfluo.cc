@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <!--
   Template for a new project page. See "Adding a project" in the README.
-  Duplicate the whole template/ folder and rename it to the project name, then
-  rename template.html and template.css to match (NAME/NAME.html, NAME/NAME.css),
-  update the stylesheet link below, replace every PLACEHOLDER in this file
-  (search for capitals) and delete the noindex line. Put the project images in the same folder and point the img
+  Duplicate the whole template/ folder and rename it to the project name (e.g. fragments),
+  then rename template.html and template.css to match (fragments/fragments.html,
+  fragments/fragments.css), update the stylesheet link below, replace every
+  [placeholder] in this file (search for "[") and delete the noindex line. Put the project images in the same folder and point the img
   src attributes at them (the grey placeholder is only for previewing).
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex"> <!-- REMOVE this line in the copy -->
-  <title>PROJECT_NAME - SUPERFLUO</title>
+  <meta name="robots" content="noindex"> <!-- remove this line in the copy -->
+  <title>[project name] - SUPERFLUO</title>
   <link rel="icon" type="image/png" href="/favicon.png">
-  <meta name="description" content="PROJECT_DESCRIPTION">
+  <meta name="description" content="[project description]">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SUPERFLUO">
-  <meta property="og:title" content="PROJECT_NAME - SUPERFLUO">
-  <meta property="og:description" content="PROJECT_DESCRIPTION">
-  <meta property="og:url" content="https://superfluo.cc/NAME/NAME.html">
-  <meta property="og:image" content="https://superfluo.cc/NAME/PREVIEW_IMAGE.jpg">
+  <meta property="og:title" content="[project name] - SUPERFLUO">
+  <meta property="og:description" content="[project description]">
+  <meta property="og:url" content="https://superfluo.cc/[name]/[name].html">
+  <meta property="og:image" content="https://superfluo.cc/[name]/[preview image].jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="template.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -34,25 +34,25 @@
       <div id="logo"></div>
     </a>
     <p id="description">
-      <i>PROJECT_NAME</i><br>
-      ONE-LINE DESCRIPTION<br>
-      VENUE, CITY<br>
-      DD.MM.YY – DD.MM.YY
+      <i>[project name]</i><br>
+      [one-line description]<br>
+      [venue, city]<br>
+      [dd.mm.yy – dd.mm.yy]
     </p>
     <div id="image-stack">
       <!-- Repeat per image. Use the real pixel size for width/height.
            Keep the first image eager; add loading="lazy" to the rest.
            data-title is the hover label (credit or frame number);
            alt describes what the image shows. -->
-      <div class="image-container" data-title="CREDIT © YEAR">
-        <img src="/assets/placeholder.png" width="1920" height="1920" alt="WHAT THE IMAGE SHOWS">
+      <div class="image-container" data-title="[credit © year]">
+        <img src="/assets/placeholder.png" width="1920" height="1920" alt="[what the image shows]">
       </div>
-      <p id="caption">CAPTION</p>
+      <p id="caption">[caption]</p>
 
-      <div class="image-container" data-title="CREDIT © YEAR">
-        <img src="/assets/placeholder.png" width="1920" height="1920" loading="lazy" alt="WHAT THE IMAGE SHOWS">
+      <div class="image-container" data-title="[credit © year]">
+        <img src="/assets/placeholder.png" width="1920" height="1920" loading="lazy" alt="[what the image shows]">
       </div>
-      <p id="caption">CAPTION</p>
+      <p id="caption">[caption]</p>
     </div>
   </div>
 </body>

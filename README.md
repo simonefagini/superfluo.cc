@@ -35,11 +35,13 @@ Add the hex value to `PALETTE` in `assets/palette.js`, and add a matching circle
 
 ## Adding a project
 
-1. Duplicate the `template/` folder and rename it to the project name, for example `newproject/`. Rename the two files inside to match (`newproject.html`, `newproject.css`). The page renders at `superfluo.cc/newproject/newproject.html`.
-2. Put the images in the new folder.
-3. In the page, update the stylesheet link to `newproject.css`, and replace every placeholder (search for the capitals): title, description, OG tags, text and images. Delete the `noindex` line.
+Use the project name in lowercase, like `fragments` or `transitions`. Below it is written as `name`.
+
+1. Duplicate the `template/` folder and rename it to `name/`. Rename the two files inside to `name.html` and `name.css`. The page will be at `superfluo.cc/name/name.html`.
+2. Put the project images in `name/`.
+3. In `name.html`, update the stylesheet link to `name.css`, and replace every `[placeholder]` (search for `[`): title, description, OG tags, text and images. Delete the `noindex` line.
 4. In each `<img>`: set the real `src`, `width` and `height`, write `alt` text describing the image, and use `loading="lazy"` on all but the first. `data-title` is the hover label.
-5. Add the tile to `home.html` in place of a placeholder (link to `newproject/newproject.html`, with `alt` text).
+5. Add the tile to `home.html` in place of a placeholder (link to `name/name.html`, with `alt` text).
 6. Add the page URL to `sitemap.xml`.
 
 ## License
