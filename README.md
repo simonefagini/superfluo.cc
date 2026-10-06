@@ -37,7 +37,7 @@ Add the hex value to `PALETTE` in `assets/palette.js`, and add a matching circle
 
 1. Create a folder `NAME/` and put the images in it.
 2. Copy `project-template.html` to `NAME/NAME.html` and replace every placeholder (title, description, OG tags, images). Delete the `noindex` line.
-3. Copy `transitions/transitions.css` to `NAME/NAME.css` as a starting point.
+3. Copy `transitions/transitions.css` to `NAME/NAME.css` and point the template's stylesheet link at it.
 4. In each `<img>`: set the real `width`/`height`, write `alt` text describing the image, and use `loading="lazy"` on all but the first. `data-title` is the hover label.
 5. Add the tile to `home.html` in place of a placeholder (with `alt` text).
 6. Add the page URL to `sitemap.xml`.
