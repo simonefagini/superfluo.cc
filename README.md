@@ -1,7 +1,7 @@
 # SUPERFLUO
 [superfluo](https://superfluo.cc) is a creative playground where I break, build, and learn stuff.
 
-Static HTML/CSS/JS, deployed with GitHub Pages. No build step.
+Static HTML/CSS/JS, deployed with GitHub Pages. No build step. Visits are counted with [GoatCounter](https://superfluo.goatcounter.com) (no cookies); the script tag is in every page's `<head>`, including the template.
 
 ## Content
 
