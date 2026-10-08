@@ -3,6 +3,7 @@
   --body-bg: white;
   --image-bg: #f0f0f0;
   --logo-bg: #eaeaea;
+  --highlight-color: #d8d8d8;
 }
 
 html {
@@ -19,6 +20,11 @@ body {
   background-color: var(--body-bg);
   font-family: Roboto, sans-serif;
   font-weight: 400;
+}
+
+::selection {
+  background: var(--highlight-color);
+  color: var(--text-color);
 }
 
 a {
