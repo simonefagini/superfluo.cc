@@ -1,9 +1,10 @@
 :root {
-  --text-color: black;
-  --body-bg: white;
-  --image-bg: #f0f0f0;
+  --text-color: #c8c8c8;
+  --body-bg: #282828;
+  --image-bg: #333333;
   --logo-bg: #eaeaea;
-  --highlight-color: #dcdcdc;
+  --highlight-color: #808080;
+  --hover-color: #ffffff;
 }
 
 html {
@@ -18,13 +19,14 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--body-bg);
+  color: var(--text-color);
   font-family: Roboto, sans-serif;
   font-weight: 400;
 }
 
 ::selection {
   background: var(--highlight-color);
-  color: var(--text-color);
+  color: var(--hover-color);
 }
 
 a {
@@ -45,7 +47,7 @@ a {
 }
 
 #logo-link:hover #logo {
-  background: #d0d0d0;
+  background: var(--hover-color);
   transition: background-color 0.3s ease;
 }
 
@@ -139,6 +141,10 @@ a {
   opacity: 0;
 }
 
+#images a#noActive img {
+  opacity: 0.12;
+}
+
 #images a#noActive {
   cursor: default;
   pointer-events: none;
@@ -150,7 +156,7 @@ a {
 }
 
 #outLink:hover {
-  color: #d0d0d0;
+  color: var(--hover-color);
 }
 
 @media (max-width: 50em) {
