@@ -23,6 +23,7 @@
       const BOUNCE_REPEAT_INTERVAL = 10000;
       const REDIRECT_DELAY = 45000;
 
+      const EMPTY_PAUSE = 500;
       const HOME = "/home.html";
       let leaving = false;
       let bounceInterval;
@@ -34,9 +35,11 @@
         logo.classList.remove("intro-bounce");
         container.classList.add("leaving");
         container.addEventListener("animationend", (event) => {
-          if (event.animationName === "scaleOut") window.location.assign(HOME);
+          if (event.animationName === "scaleOut") {
+            setTimeout(() => window.location.assign(HOME), EMPTY_PAUSE);
+          }
         });
-        setTimeout(() => window.location.assign(HOME), 1100);
+        setTimeout(() => window.location.assign(HOME), 1100 + EMPTY_PAUSE);
       }
 
       container.addEventListener("animationend", (event) => {
