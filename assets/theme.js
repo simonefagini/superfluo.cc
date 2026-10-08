@@ -24,6 +24,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("theme-toggle");
+    if (!button) return;
     apply(root.getAttribute("data-theme"));
     button.addEventListener("click", () => {
       const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";

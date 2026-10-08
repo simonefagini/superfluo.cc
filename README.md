@@ -26,6 +26,7 @@ Static HTML/CSS/JS, deployed with GitHub Pages. No build step. Visits are counte
 - `palette.js` holds the color palette, picks one color per page load (`PICKED_COLOR`) and points the favicon at the matching file in `favicons/`. It must load before `colors.js` and `home.js`.
 - `colors.js` sets the page background (index and 404).
 - `home.js` sets the logo color (home and project pages).
+- `theme.css` and `theme.js` handle light and dark mode on every page except index and 404. The CSS holds the color variables for both themes and the toggle button; the JS picks the saved or system theme before first paint and wires the toggle. Page stylesheets should use the variables, never fixed colors.
 - `ratio.js` sizes the project pages to the window.
 - `SUPERFLUO-LOGO.svg` is the logo.
 
