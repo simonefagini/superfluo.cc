@@ -5,58 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SUPERFLUO</title>
     <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css" />
     <script src="assets/palette.js" defer></script>
     <script src="assets/colors.js" defer></script>
     <script data-goatcounter="https://superfluo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
-    <div id="container">
-      <a href="/home.html">
-        <img id="logo" src="assets/SUPERFLUO-LOGO.svg" alt="SUPERFLUO">
-      </a>
-    </div>
-    <script>
-      const container = document.getElementById("container");
-      const logo = document.getElementById("logo");
-      const BOUNCE_DELAY = 500;
-      const BOUNCE_REPEAT_INTERVAL = 10000;
-      const REDIRECT_DELAY = 45000;
-
-      const EMPTY_PAUSE = 500;
-      const HOME = "/home.html";
-      let leaving = false;
-      let bounceInterval;
-
-      function leave() {
-        if (leaving) return;
-        leaving = true;
-        clearInterval(bounceInterval);
-        logo.classList.remove("intro-bounce");
-        container.classList.add("leaving");
-        container.addEventListener("animationend", (event) => {
-          if (event.animationName === "scaleOut") {
-            setTimeout(() => window.location.assign(HOME), EMPTY_PAUSE);
-          }
-        });
-        setTimeout(() => window.location.assign(HOME), 1100 + EMPTY_PAUSE);
-      }
-
-      container.addEventListener("animationend", (event) => {
-        if (event.animationName !== "scaleIn") return;
-        setTimeout(() => logo.classList.add("intro-bounce"), BOUNCE_DELAY);
-        bounceInterval = setInterval(() => logo.classList.add("intro-bounce"), BOUNCE_REPEAT_INTERVAL);
-        setTimeout(leave, REDIRECT_DELAY);
-      });
-
-      logo.parentElement.addEventListener("click", (event) => {
-        event.preventDefault();
-        leave();
-      });
-
-      logo.addEventListener("animationend", (event) => {
-        if (event.animationName === "bounce") logo.classList.remove("intro-bounce");
-      });
-    </script>
+    <a href="/home.html" id="logo">superfluo</a>
   </body>
 </html>
