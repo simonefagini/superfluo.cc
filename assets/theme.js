@@ -7,8 +7,15 @@
     try { return localStorage.getItem("theme"); } catch (e) { return null; }
   }
 
+  // Tints the browser bar on phones; created here so no page needs the tag
+  const bar = document.createElement("meta");
+  bar.name = "theme-color";
+  document.head.appendChild(bar);
+  const BAR_COLOR = { light: "#ffffff", dark: "#282828" };
+
   function apply(theme) {
     root.setAttribute("data-theme", theme);
+    bar.content = BAR_COLOR[theme];
     const button = document.getElementById("theme-toggle");
     if (button) {
       button.setAttribute("aria-label", theme === "dark" ? "switch to light mode" : "switch to dark mode");
