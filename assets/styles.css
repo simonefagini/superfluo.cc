@@ -23,7 +23,7 @@ a {
 }
 
 #logo:hover {
-  animation: spin 0s linear forwards;
+  animation: bounce 380ms ease-out;
 }
 
 @keyframes spin {
@@ -48,6 +48,40 @@ a {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+#logo.intro-bounce {
+  animation: bounce 380ms ease-out;
+}
+
+@keyframes bounce {
+  0%   { transform: scaleY(1); }
+  50%  { transform: scaleY(1.5); }
+  100% { transform: scaleY(1); }
+}
+
+#container.leaving {
+  pointer-events: none;
+  animation: scaleOut 0.7s ease-in-out forwards;
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1, 1.5);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1, 0.01);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 0.01);
+    opacity: 0;
   }
 }
 
