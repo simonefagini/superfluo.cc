@@ -5,9 +5,9 @@
 
 body {
   margin: 0;
-  overflow: hidden;
   display: grid;
   place-items: center;
+  height: 100vh;
   background-color: var(--body-bg);
 }
 
@@ -17,85 +17,8 @@ a {
 }
 
 #logo {
-  width: 90vw;
-  height: auto;
- color:var(--text-color);
-}
-
-#logo:hover {
-  animation: bounce 380ms ease-out;
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(0deg) scale(1.05);
-  }
-}
-
-#container {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  width: 100vw;
-  animation: scaleIn 0.5s cubic-bezier(0,.70,.40,.40) forwards;
-}
-
-@keyframes scaleIn {
-  0% {
-    transform: scaleY(100);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-#logo.intro-bounce {
-  animation: bounce 380ms ease-out;
-}
-
-@keyframes bounce {
-  0%   { transform: scaleY(1); }
-  50%  { transform: scaleY(1.5); }
-  100% { transform: scaleY(1); }
-}
-
-#container.leaving {
-  pointer-events: none;
-  animation: scaleOut 0.7s ease-in-out forwards;
-}
-
-@keyframes scaleOut {
-  0% {
-    transform: scale(1, 1);
-    opacity: 1;
-  }
-  25% {
-    transform: scale(1, 1.5);
-    opacity: 1;
-  }
-  70% {
-    transform: scale(1, 0.01);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 0.01);
-    opacity: 0;
-  }
-}
-
-#container.loading {
-  pointer-events: none;
-  
-}
-
-@media (hover: none) {
-  #logo:active {
-    animation: spin 0s linear forwards;
-  }
-  
-  #logo:hover {
-    animation: none;
-  }
+  font-family: "Gabarito", sans-serif;
+  font-weight: 800;
+  font-size: 20vw;
+  letter-spacing: 0.08em;
 }
