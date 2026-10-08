@@ -42,6 +42,7 @@ a {
   font-weight: 800;
   font-size: 20vw;
   letter-spacing: 0.08em;
+  margin-right: -0.08em;
 }
 
 #logo:hover,
@@ -51,7 +52,7 @@ a {
 
 @keyframes bounce {
   0%   { transform: scaleY(1); }
-  50%  { transform: scaleY(1.5); }
+  50%  { transform: scaleY(1.2); }
   100% { transform: scaleY(1); }
 }
 
@@ -66,7 +67,7 @@ a {
     opacity: 1;
   }
   25% {
-    transform: scale(1, 1.5);
+    transform: scale(1, 1.2);
     opacity: 1;
   }
   70% {
