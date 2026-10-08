@@ -50,28 +50,31 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* light: a flat circle. dark: the same circle hollowed into a crescent */
+/* an eclipse: a cut-out disc of the same size slides across the circle, leaving a crescent.
+   --p is 1 with the disc clear of the circle (light) and 0 with it in place (dark) */
+@property --p {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 1;
+}
+
 #theme-toggle::before {
   content: '';
+  --cut-x: calc(0.38rem + var(--p) * 0.72rem);
+  --cut-y: calc(-0.2rem - var(--p) * 0.38rem);
   width: 1.1rem;
   height: 1.1rem;
-  box-sizing: border-box;
   border-radius: 50%;
-  /* a spread wider than the radius fills the circle, so it can ease into the crescent below */
-  box-shadow: inset 0 0 0 0.6rem var(--toggle-color);
-  transform: rotate(-70deg);
-  transition: box-shadow 0.8s ease-in-out, transform 0.8s ease-in-out;
+  background: var(--toggle-color);
+  -webkit-mask: radial-gradient(circle at calc(50% + var(--cut-x)) calc(50% + var(--cut-y)), transparent calc(0.55rem - 0.5px), #000 0.55rem);
+  mask: radial-gradient(circle at calc(50% + var(--cut-x)) calc(50% + var(--cut-y)), transparent calc(0.55rem - 0.5px), #000 0.55rem);
+  transition: --p 0.8s ease-in-out, background-color 0.3s ease;
 }
 
 :root[data-theme="dark"] #theme-toggle::before {
-  box-shadow: inset 0.4rem -0.15rem 0 0 var(--toggle-color);
-  transform: rotate(20deg);
+  --p: 0;
 }
 
 #theme-toggle:hover::before {
-  box-shadow: inset 0 0 0 0.6rem var(--hover-color);
-}
-
-:root[data-theme="dark"] #theme-toggle:hover::before {
-  box-shadow: inset 0.4rem -0.15rem 0 0 var(--hover-color);
+  background-color: var(--hover-color);
 }
