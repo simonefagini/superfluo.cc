@@ -17,5 +17,5 @@ function lightComplement(hex) {
     else h = (r - g) / d + 4;
   }
   h = (h * 60 + 180 + 360) % 360;
-  return "hsl(" + Math.round(h) + " 45% 82%)";
+  return "hsl(" + Math.round(h) + " 38% 86%)";
 }
