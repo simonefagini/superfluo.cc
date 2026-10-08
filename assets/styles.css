@@ -43,6 +43,9 @@ a {
   font-size: 19vw;
   letter-spacing: 0.08em;
   margin-right: -0.08em;
+  line-height: 1;
+  position: relative;
+  top: -0.07em;
 }
 
 #logo:hover,
