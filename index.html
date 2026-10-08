@@ -20,10 +20,14 @@
       const container = document.getElementById("container");
       const logo = document.getElementById("logo");
       const BOUNCE_DELAY = 800;
+      const BOUNCE_REPEAT_INTERVAL = 10000;
+      const REDIRECT_DELAY = 45000;
 
       container.addEventListener("animationend", (event) => {
         if (event.animationName !== "scaleIn") return;
         setTimeout(() => logo.classList.add("intro-bounce"), BOUNCE_DELAY);
+        setInterval(() => logo.classList.add("intro-bounce"), BOUNCE_REPEAT_INTERVAL);
+        setTimeout(() => window.location.assign("/home.html"), REDIRECT_DELAY);
       });
 
       logo.addEventListener("animationend", (event) => {
