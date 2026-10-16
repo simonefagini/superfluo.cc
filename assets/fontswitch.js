@@ -1,11 +1,10 @@
-// temporary font tester: ?font=libron|roboto|schibsted|host|hanken (or ?font=default to reset)
+// temporary font tester: ?font=host|onest|satoshi|generalsans (or ?font=default to reset)
 (function () {
   var stacks = {
-    libron: 'Libron, Georgia, serif',
-    roboto: 'Roboto, sans-serif',
-    schibsted: '"Schibsted Grotesk", sans-serif',
     host: '"Host Grotesk", sans-serif',
-    hanken: '"Hanken Grotesk", sans-serif'
+    onest: 'Onest, sans-serif',
+    satoshi: 'Satoshi, sans-serif',
+    generalsans: '"General Sans", sans-serif'
   };
   var choice = null;
   try {
