@@ -1,4 +1,5 @@
 // temporary font tester: floating panel (bottom-left) to pick font and body weight.
+// the choice is per tab (sessionStorage + URL), so you can compare fonts in separate tabs.
 // URL params still work: ?font=host|onest|satoshi|generalsans  ?weight=500  (or =default)
 (function () {
   var fonts = {
@@ -9,8 +10,8 @@
   };
   var state = { font: 'host', weight: null };
 
-  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
-  function set(k, v) { try { v === null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch (e) {} }
+  function get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+  function set(k, v) { try { v === null ? sessionStorage.removeItem(k) : sessionStorage.setItem(k, v); } catch (e) {} }
 
   var q = new URLSearchParams(location.search);
   var f = q.get('font'), w = q.get('weight');
@@ -23,6 +24,13 @@
   function apply() {
     root.setProperty('--font', fonts[state.font].stack);
     root.setProperty('--weight', state.weight || fonts[state.font].weight);
+    // keep the choice in the URL too, so a reload or duplicated tab keeps it
+    try {
+      var u = new URL(location.href);
+      u.searchParams.set('font', state.font);
+      state.weight ? u.searchParams.set('weight', state.weight) : u.searchParams.delete('weight');
+      history.replaceState(null, '', u);
+    } catch (e) {}
   }
   apply();
 
