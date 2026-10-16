@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--body-bg);
-  font-family: Libron, Georgia, serif;
+  font-family: var(--font, Libron, Georgia, serif);
   font-weight: 400;
 }
 a {
@@ -82,7 +82,7 @@ a {
 }
 .image-container::after {
   content: attr(data-title);
-  font-family: Libron, Georgia, serif;
+  font-family: var(--font, Libron, Georgia, serif);
   font-weight: 300;
   font-style: italic;
   color: white;
@@ -118,7 +118,7 @@ a {
 }
 /* Captions */
 .caption {
-  font-family: Libron, Georgia, serif;
+  font-family: var(--font, Libron, Georgia, serif);
   font-weight: 400;
   font-size: var(--text-size);
   line-height: 1.2;

@@ -11,7 +11,7 @@ body {
   align-items: center;
   background-color: var(--body-bg);
   color: var(--text-color);
-  font-family: Libron, Georgia, serif;
+  font-family: var(--font, Libron, Georgia, serif);
   font-weight: 400;
 }
 
@@ -86,7 +86,7 @@ a {
 }
 
 #images a::after {
-  font-family: Libron, Georgia, serif;
+  font-family: var(--font, Libron, Georgia, serif);
   font-weight: 100;
   font-style: italic;
   color: white;
