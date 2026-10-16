@@ -14,8 +14,8 @@
   /* fluid sizing shared by all pages: text and logo scale with the viewport,
      the same proportions on mobile and desktop, no jump at a breakpoint */
   --content-width: min(85vw, 70rem);
-  --text-size: clamp(1.25rem, 4vw, 2.5rem);
-  --logo-width: clamp(10rem, 40vw, 24rem);
+  --text-size: clamp(1.25rem, min(4vw, 1.1vw + 1.15rem), 2.5rem);
+  --logo-width: clamp(10rem, min(40vw, 13vw + 8.7rem), 20.4rem);
 }
 
 :root[data-theme="dark"] {
