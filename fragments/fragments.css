@@ -6,8 +6,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--body-bg);
-  font-family: var(--font, "Host Grotesk", sans-serif);
-  font-weight: var(--weight, 400);
+  font-family: Onest, sans-serif;
+  font-weight: 450;
 }
 a {
   text-decoration: none;
@@ -82,7 +82,7 @@ a {
 }
 .image-container::after {
   content: attr(data-title);
-  font-family: var(--font, "Host Grotesk", sans-serif);
+  font-family: Onest, sans-serif;
   font-weight: 300;
   font-style: italic;
   color: white;
@@ -118,8 +118,8 @@ a {
 }
 /* Captions */
 .caption {
-  font-family: var(--font, "Host Grotesk", sans-serif);
-  font-weight: var(--weight, 400);
+  font-family: Onest, sans-serif;
+  font-weight: 450;
   font-size: var(--text-size);
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
