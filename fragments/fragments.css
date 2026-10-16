@@ -14,8 +14,7 @@ a {
   color: var(--text-color);
 }
 #project-detail {
-  width: 70vw;
-  max-width: 70rem;
+  width: var(--content-width);
   text-align: left;
   padding: 5vw 0;
   display: flex;
@@ -31,8 +30,8 @@ a {
   transition: background-color 0.3s ease;
 }
 #logo {
-  width: clamp(12rem, 20vw, 18rem);
-  height: 2.5rem;
+  width: var(--logo-width);
+  height: calc(var(--logo-width) / 9 + 1.25rem);
   margin-bottom: 0.5rem;
   background: var(--logo-bg);
   -webkit-mask: url("../assets/SUPERFLUO-LOGO.svg") no-repeat center / contain;
@@ -40,7 +39,7 @@ a {
 }
 #description {
   margin: 0 0 5vw 0;
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-size: var(--text-size);
   line-height: 1.2;
   max-width: 100%;
 }
@@ -121,7 +120,7 @@ a {
 .caption {
   font-family: Roboto, sans-serif;
   font-weight: 400;
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-size: var(--text-size);
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
   color: var(--text-color);
@@ -138,7 +137,7 @@ a {
   width: 100%;
 }
 #credits .caption {
-  font-size: clamp(1.2rem, 1.1vw, 1.6rem);
+  font-size: calc(var(--text-size) * 0.8);
   color: var(--grey-link);
   line-height: 1.4;
   margin: 0 0 1rem 0;
@@ -149,23 +148,4 @@ a {
 }
 #credits a:hover {
   color: var(--text-color);
-}
-/* Responsive */
-@media (max-width: 50em) {
-  #description {
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
-  }
-  #logo {
-    width: clamp(10rem, 40vw, 15rem);
-    height: 2rem;
-  }
-  #project-detail {
-    width: 85vw;
-  }
-}
-/* MacBook-style screens */
-@media (min-width: 1400px) and (max-width: 1600px) {
-  #project-detail {
-    width: 60vw;
-  }
 }
