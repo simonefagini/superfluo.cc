@@ -7,7 +7,7 @@ body {
   align-items: center;
   background-color: var(--body-bg);
   font-family: var(--font, "Host Grotesk", sans-serif);
-  font-weight: 400;
+  font-weight: var(--weight, 400);
 }
 a {
   text-decoration: none;
@@ -119,7 +119,7 @@ a {
 /* Captions */
 .caption {
   font-family: var(--font, "Host Grotesk", sans-serif);
-  font-weight: 400;
+  font-weight: var(--weight, 400);
   font-size: var(--text-size);
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
